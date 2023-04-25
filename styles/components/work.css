@@ -1,0 +1,276 @@
+.work {
+  text-align: center;
+}
+
+.work__title {
+  font-size: var(--size-2xl);
+  color: var(--clr-light);
+}
+
+.work__description {
+  max-width: 60ch;
+  font-size: var(--size-sm);
+  color: var(--clr-slate600);
+  margin: 1rem auto;
+}
+
+.work__project-title {
+  font-size: var(--size-base);
+  margin-bottom: 1rem;
+}
+
+.work__img-wrapper {
+  position: relative;
+}
+
+.work__img-wrapper::after {
+  content: '';
+  background-color: rgba(79, 70, 229, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+
+.work__img-wrapper:hover::after {
+  background-color: rgba(79, 70, 229, 0.3);
+}
+
+.work__project:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+.work__project-description1 {
+  font-size: var(--size-sm);
+  color: var(--clr-slate600);
+  margin: 1rem 0;
+}
+
+.work__project-description2 {
+  font-size: var(--size-sm);
+  color: var(--clr-slate400);
+  margin-bottom: 1rem;
+}
+
+.work__project-btn {
+  font-size: var(--size-sm);
+}
+
+.work__project-subtitle {
+  display: none;
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .work__title {
+    font-size: var(--size-3xl);
+  }
+
+  .work__description {
+    font-size: var(--size-base);
+    margin: 1.5rem auto;
+  }
+
+  .work__project-title {
+    font-size: var(--size-lg);
+    margin-bottom: 1.5rem;
+  }
+
+  .work__project-description1 {
+    font-size: var(--size-base);
+    margin: 1.5rem 0;
+  }
+
+  .work__project-description2 {
+    font-size: var(--size-base);
+    margin-bottom: 1.5rem;
+  }
+
+  .work__project-btn {
+    font-size: var(--size-base);
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .work__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'image1 content1'
+      'content2 image2'
+      'image3 content3'
+      'content4 image4'
+      'image5 content5'
+      'content6 image6';
+    place-items: center;
+  }
+
+  .work__image1 {
+    grid-area: image1;
+  }
+
+  .work__image2 {
+    grid-area: image2;
+  }
+
+  .work__image3 {
+    grid-area: image3;
+  }
+
+  .work__image4 {
+    grid-area: image4;
+  }
+
+  .work__image5 {
+    grid-area: image5;
+  }
+
+  .work__image6 {
+    grid-area: image6;
+  }
+
+  .work__content1 {
+    grid-area: content1;
+  }
+
+  .work__content2 {
+    grid-area: content2;
+  }
+
+  .work__content3 {
+    grid-area: content3;
+  }
+
+  .work__content4 {
+    grid-area: content4;
+  }
+
+  .work__content5 {
+    grid-area: content5;
+  }
+
+  .work__content6 {
+    grid-area: content6;
+  }
+
+  .work__project {
+    padding: 0 1rem;
+  }
+
+  .work__project-title {
+    display: none;
+  }
+
+  .work__project-description1 {
+    font-size: var(--size-xs);
+    margin: 1em 0;
+  }
+
+  .work__project-description2 {
+    font-size: var(--size-xs);
+    margin-bottom: 1em;
+  }
+
+  .work__project-btn {
+    font-size: var(--size-xs);
+  }
+
+  .work__project:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .work__project-subtitle {
+    display: block;
+    font-size: var(--size-base);
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .work__project-description1 {
+    font-size: var(--size-sm);
+  }
+
+  .work__project-description2 {
+    font-size: var(--size-sm);
+  }
+
+  .work__project-btn {
+    font-size: var(--size-sm);
+  }
+
+  .work__project-subtitle {
+    font-size: var(--size-lg);
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .work__title {
+    font-size: var(--size-4xl);
+  }
+
+  .work__description {
+    font-size: var(--size-lg);
+  }
+
+  .work__project-description1 {
+    font-size: var(--size-base);
+  }
+
+  .work__project-description2 {
+    font-size: var(--size-base);
+  }
+
+  .work__project-btn {
+    font-size: var(--size-base);
+  }
+
+  .work__project-subtitle {
+    font-size: var(--size-xl);
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .work__title {
+    font-size: var(--size-5xl);
+  }
+
+  .work__description {
+    font-size: var(--size-xl);
+    margin: 2rem auto;
+  }
+
+  .work__project-description1 {
+    font-size: var(--size-lg);
+  }
+
+  .work__project-description2 {
+    font-size: var(--size-lg);
+  }
+
+  .work__project-btn {
+    font-size: var(--size-lg);
+  }
+
+  .work__project-subtitle {
+    font-size: var(--size-2xl);
+  }
+
+  .work__container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .work__container {
+    width: 70%;
+  }
+}
